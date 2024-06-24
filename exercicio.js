@@ -11,7 +11,13 @@ if(num == 'finalizar' || num == 'f'){
         soma = soma + array[i];
     }
     media = soma / array.length;
-
+    let mediana;
+    if(array.length%2 == 0){
+        mediana = (array[array.length/2] + array[(array.length/2)-1])/2;
+    } else{
+        mediana = array[Math.floor(array.length/2)];
+    }
+    console.log("A mediana é " + mediana);
     console.log("A média é " + media);
     process.exit();
 
