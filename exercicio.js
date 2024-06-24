@@ -12,6 +12,15 @@ if(num == 'finalizar' || num == 'f'){
     }
     media = soma / array.length;
     let mediana;
+    for(let i=0; i<array.length; i++){
+        for(let j=i+1; j<array.length; j++){
+            if(array[i] > array[j]){
+                array[i] = array[i] + array[j];
+                array[j] = array[i] - array[j];
+                array[i] = array[i] - array[j];
+            }
+        }
+    }
     if(array.length%2 == 0){
         mediana = (array[array.length/2] + array[(array.length/2)-1])/2;
     } else{
